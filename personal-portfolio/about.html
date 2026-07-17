@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio.Pro | About Jonathan Miller</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Learn about Jonathan Miller's career journey, skills, and existing corporate clients. Specializing in HTML5, CSS3, Bootstrap, and Javascript.">
+    <meta name="keywords" content="freelance resume, developer skills, developer background, clients list">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom Style Sheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-portfolio navbar-light" id="mainNavbar">
+            <div class="container">
+                <a class="navbar-brand" href="index.html" id="brandLogo">
+                    <span>Portfolio</span>.Pro
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation" id="navCollapseBtn">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html" id="navHomeLink">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="about.html" id="navAboutLink">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html" id="navPortfolioLink">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html" id="navServicesLink">Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html" id="navContactLink">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        
+        <!-- Header Section -->
+        <section class="py-5 bg-light border-bottom" id="aboutHeader">
+            <div class="container text-center py-3">
+                <h1 class="serif-font text-gradient display-5">My Background & Core Competencies</h1>
+                <p class="text-muted max-width-600 mx-auto">From hand-crafted HTML to enterprise-level modular styling, here is my path.</p>
+            </div>
+        </section>
+
+        <!-- Biography Section -->
+        <section class="py-5" id="biography">
+            <div class="container py-3">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <svg viewBox="0 0 500 400" width="100%" class="rounded-4 shadow" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#FAF7F2" />
+                            <!-- Desk Setup Vector Representation -->
+                            <rect x="50" y="320" width="300" height="15" fill="#4F46E5" />
+                            <rect x="180" y="270" width="40" height="50" fill="#1E293B" />
+                            <ellipse cx="200" cy="270" rx="60" ry="10" fill="#1E293B" />
+                            
+                            <!-- Laptop on desk -->
+                            <rect x="120" y="220" width="160" height="100" rx="8" fill="#1E293B" />
+                            <rect x="130" y="230" width="140" height="80" fill="#0F172A" />
+                            <!-- Lines on laptop screen -->
+                            <line x1="140" y1="240" x2="220" y2="240" stroke="#FF7A59" stroke-width="4" stroke-linecap="round" />
+                            <line x1="140" y1="255" x2="260" y2="255" stroke="#4F46E5" stroke-width="4" stroke-linecap="round" />
+                            <line x1="140" y1="270" x2="190" y2="270" stroke="#E2E8F0" stroke-width="4" stroke-linecap="round" />
+                            
+                            <!-- Desk Mug -->
+                            <rect x="310" y="295" width="20" height="25" rx="3" fill="#FF7A59" />
+                            <path d="M330,300 C335,300 335,310 330,310" stroke="#FF7A59" stroke-width="3" fill="none" />
+                        </svg>
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="serif-font mb-4">Crafting Web Solutions Since 2019</h2>
+                        <p class="mb-3">My coding journey began during my college days when I fell in love with styling components using raw vanilla CSS. Since then, I've dedicated myself to master the intricacies of standard markup, responsive behavior, and interface usability.</p>
+                        <p class="mb-3">Over the past seven years, I've worked as a full-time freelancer and a technical consultant. I advocate for semantic layout structures and accessibility guidelines, guaranteeing that the interfaces I construct are usable by everyone.</p>
+                        <p>When I am not debugging CSS grids, I actively contribute to open-source developer toolkits and host introductory web styling workshops for local communities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="py-5 bg-white border-top border-bottom" id="skills">
+            <div class="container py-3">
+                <div class="text-center mb-5">
+                    <h2>Technical Skills Directory</h2>
+                    <p class="text-muted">A clear, semi-quantitative view of my coding and architectural expertise.</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <!-- Skill 1 -->
+                        <div class="skill-item" id="skillHTML">
+                            <div class="skill-header">
+                                <span>HTML5 / Semantic Markup</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-percent="95"></div>
+                            </div>
+                        </div>
+                        <!-- Skill 2 -->
+                        <div class="skill-item" id="skillCSS">
+                            <div class="skill-header">
+                                <span>CSS3 / Flexbox / Grid / Animations</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-percent="90"></div>
+                            </div>
+                        </div>
+                        <!-- Skill 3 -->
+                        <div class="skill-item" id="skillFrameworks">
+                            <div class="skill-header">
+                                <span>Bootstrap 5 & Tailwind CSS Frameworks</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-percent="92"></div>
+                            </div>
+                        </div>
+                        <!-- Skill 4 -->
+                        <div class="skill-item" id="skillJS">
+                            <div class="skill-header">
+                                <span>JavaScript (ES6+) / DOM Interaction</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-percent="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Existing Clients Section -->
+        <section class="py-5" id="clients">
+            <div class="container py-3">
+                <div class="text-center mb-5">
+                    <h2>Trusted By Companies Globally</h2>
+                    <p class="text-muted">I've built robust systems and frontend prototypes for amazing businesses.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-6 col-md-3">
+                        <div class="client-logo-card" id="client1">
+                            <i class="fa-solid fa-cloud me-2"></i> CloudNet
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="client-logo-card" id="client2">
+                            <i class="fa-solid fa-leaf me-2"></i> BioNursery
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="client-logo-card" id="client3">
+                            <i class="fa-solid fa-bolt me-2"></i> ZapWeb
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="client-logo-card" id="client4">
+                            <i class="fa-solid fa-store me-2"></i> RetailStore
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-portfolio">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-white">Portfolio<span>.Pro</span></h5>
+                    <p class="text-white-50 mt-3">A premium SaaS-oriented portfolio showcase for freelance web development and UX architecture. Engineered for device-agnostic excellence.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-2"><a href="index.html">Home</a></li>
+                        <li class="mb-2"><a href="about.html">About</a></li>
+                        <li class="mb-2"><a href="portfolio.html">Portfolio</a></li>
+                        <li class="mb-2"><a href="services.html">Service</a></li>
+                        <li class="mb-2"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Hire Details</h5>
+                    <ul class="list-unstyled text-white-50 mt-3">
+                        <li class="mb-2"><i class="fa-solid fa-envelope me-2 text-coral"></i> contact@portfoliopro.com</li>
+                        <li class="mb-2"><i class="fa-solid fa-phone me-2 text-coral"></i> +1 (555) 901-4432</li>
+                        <li class="mb-2"><i class="fa-solid fa-location-dot me-2 text-coral"></i> Silicon District, Tech City</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Current Date & Time</h5>
+                    <!-- Live Clock Widget -->
+                    <div class="portfolio-clock mt-3" id="clockWidget">
+                        <i class="fa-regular fa-clock me-2 text-coral"></i>
+                        <span id="liveClock">Thursday, July 09, 2026 — 10:42 AM</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-portfolio-bottom text-center text-white-50">
+                <p class="mb-0">&copy; 2026 Portfolio.Pro. All rights reserved. Hand-coded, premium responsive quality.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 Bundle JS with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Script File -->
+    <script src="js/script.js"></script>
+</body>
+</html>

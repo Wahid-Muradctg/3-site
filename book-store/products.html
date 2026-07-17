@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PageHaven | Our Books Catalog</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore the hand-picked library of PageHaven. Filter through genres like fiction, poetry, mystery, and formats like paperback, hardcover, and e-book.">
+    <meta name="keywords" content="books catalog, buy books online, fiction, poetry, mystery, paperbacks, e-books">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom Style Sheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-custom navbar-light" id="mainNavbar">
+            <div class="container">
+                <a class="navbar-brand" href="index.html" id="brandLogo">
+                    <i class="fa-solid fa-book-open"></i> PageHaven
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation" id="navCollapseBtn">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html" id="navHomeLink">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="products.html" id="navProductsLink">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html" id="navAboutLink">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html" id="navContactLink">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="py-5">
+        <div class="container">
+            <!-- Page Title Section -->
+            <div class="mb-5 text-center">
+                <h1 class="serif-font">Our Book Sanctuary</h1>
+                <p class="text-muted text-sm">Quietly curated titles, crafted to encourage reading reflection.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Sidebar Filters -->
+                <aside class="col-lg-3">
+                    <div class="filter-card" id="sidebarFilters">
+                        <h4 class="mb-4 serif-font border-bottom pb-2" style="font-size: 1.25rem;"><i class="fa-solid fa-sliders me-2"></i> Filter Books</h4>
+                        
+                        <!-- Genre Filter -->
+                        <div class="mb-4">
+                            <h5 class="serif-font mb-3" style="font-size: 1rem;">Genre</h5>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" value="fiction" id="genreFiction" checked>
+                                <label class="form-check-label" for="genreFiction">Fiction</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" value="mystery" id="genreMystery">
+                                <label class="form-check-label" for="genreMystery">Mystery</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" value="poetry" id="genrePoetry">
+                                <label class="form-check-label" for="genrePoetry">Poetry</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" value="scifi" id="genreScifi">
+                                <label class="form-check-label" for="genreScifi">Sci-Fi & Fantasy</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="biography" id="genreBio">
+                                <label class="form-check-label" for="genreBio">Biography</label>
+                            </div>
+                        </div>
+
+                        <!-- Format Filter -->
+                        <div class="mb-4">
+                            <h5 class="serif-font mb-3" style="font-size: 1rem;">Format</h5>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" value="paperback" id="formatPaperback" checked>
+                                <label class="form-check-label" for="formatPaperback">Paperback</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" value="hardcover" id="formatHardcover">
+                                <label class="form-check-label" for="formatHardcover">Hardcover</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="ebook" id="formatEbook">
+                                <label class="form-check-label" for="formatEbook">E-Book</label>
+                            </div>
+                        </div>
+
+                        <!-- Price Range -->
+                        <div class="mb-4">
+                            <h5 class="serif-font mb-3" style="font-size: 1rem;">Price Range</h5>
+                            <input type="range" class="form-range" min="5" max="50" step="5" id="priceRange">
+                            <div class="d-flex justify-content-between text-muted text-sm">
+                                <span>$5</span>
+                                <span>Max: $50</span>
+                            </div>
+                        </div>
+
+                        <!-- Apply Filters Button -->
+                        <button class="btn btn-custom w-100" type="button" onclick="alert('Filters applied successfully!')" id="applyFiltersBtn">Apply Filters</button>
+                    </div>
+                </aside>
+
+                <!-- Books Grid -->
+                <section class="col-lg-9">
+                    <div class="row g-4">
+                        <!-- Book 1 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="book-card" id="productCard1">
+                                <div class="book-img-container">
+                                    <svg viewBox="0 0 150 220" class="book-img" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="100%" height="100%" fill="#4A7C82" />
+                                        <rect x="10" y="10" width="130" height="200" fill="none" stroke="#D5E3E0" stroke-width="2" />
+                                        <text x="75" y="80" fill="#F9F6F0" font-family="'Merriweather', serif" font-weight="bold" font-size="12" text-anchor="middle">THE</text>
+                                        <text x="75" y="105" fill="#F9F6F0" font-family="'Merriweather', serif" font-weight="bold" font-size="12" text-anchor="middle">WHISPERING</text>
+                                        <text x="75" y="130" fill="#F9F6F0" font-family="'Merriweather', serif" font-weight="bold" font-size="12" text-anchor="middle">WOODS</text>
+                                        <text x="75" y="170" fill="#E0A458" font-family="'Inter', sans-serif" font-size="9" text-anchor="middle">Clara Moss</text>
+                                    </svg>
+                                </div>
+                                <div class="book-info">
+                                    <span class="book-genre">Fiction</span>
+                                    <h3 class="book-title">The Whispering Woods</h3>
+                                    <p class="book-author">by Clara Moss</p>
+                                    <p class="text-muted text-sm small flex-grow-1">A quiet story of paths intersecting in a dense, green ancient wilderness.</p>
+                                    <div class="book-footer">
+                                        <span class="book-price">$14.99</span>
+                                        <button class="btn btn-sm btn-custom btn-add-to-cart" id="addBtn1">Add <i class="fa-solid fa-cart-shopping ms-1"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Book 2 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="book-card" id="productCard2">
+                                <div class="book-img-container">
+                                    <svg viewBox="0 0 150 220" class="book-img" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="100%" height="100%" fill="#2C3E50" />
+                                        <rect x="10" y="10" width="130" height="200" fill="none" stroke="#E0A458" stroke-width="1" />
+                                        <text x="75" y="80" fill="#F9F6F0" font-family="'Merriweather', serif" font-weight="bold" font-size="12" text-anchor="middle">SHADOWS</text>
+                                        <text x="75" y="105" fill="#F9F6F0" font-family="'Merriweather', serif" font-weight="bold" font-size="12" text-anchor="middle">IN THE</text>
+                                        <text x="75" y="130" fill="#F9F6F0" font-family="'Merriweather', serif" font-weight="bold" font-size="12" text-anchor="middle">SKY</text>
+                                        <text x="75" y="170" fill="#E0A458" font-family="'Inter', sans-serif" font-size="9" text-anchor="middle">Mark Vance</text>
+                                    </svg>
+                                </div>
+                                <div class="book-info">
+                                    <span class="book-genre">Mystery</span>
+                                    <h3 class="book-title">Shadows in the Sky</h3>
+                                    <p class="book-author">by Mark Vance</p>
+                                    <p class="text-muted text-sm small flex-grow-1">Secrets unfolding among high-altitude pilots in early aviation years.</p>
+                                    <div class="book-footer">
+                                        <span class="book-price">$16.50</span>
+                                        <button class="btn btn-sm btn-custom btn-add-to-cart" id="addBtn2">Add <i class="fa-solid fa-cart-shopping ms-1"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Book 3 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="book-card" id="productCard3">
+                                <div class="book-img-container">
+                                    <svg viewBox="0 0 150 220" class="book-img" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="100%" height="100%" fill="#5C3A21" />
+                                        <rect x="10" y="10" width="130" height="200" fill="none" stroke="#D5E3E0" stroke-width="1" />
+                                        <text x="75" y="80" fill="#F9F6F0" font-family="'Merriweather', serif" font-weight="bold" font-size="12" text-anchor="middle">HARVEST</text>
+                                        <text x="75" y="105" fill="#F9F6F0" font-family="'Merriweather', serif" font-weight="bold" font-size="12" text-anchor="middle">OF LIGHT</text>
+                                        <text x="75" y="150" fill="#E0A458" font-family="'Inter', sans-serif" font-size="9" text-anchor="middle">Elena Rostova</text>
+                                    </svg>
+                                </div>
+                                <div class="book-info">
+                                    <span class="book-genre">Poetry</span>
+                                    <h3 class="book-title">Harvest of Light</h3>
+                                    <p class="book-author">by Elena Rostova</p>
+                                    <p class="text-muted text-sm small flex-grow-1">Comforting poems written about country evenings and slow autumn winds.</p>
+                                    <div class="book-footer">
+                                        <span class="book-price">$12.00</span>
+                                        <button class="btn btn-sm btn-custom btn-add-to-cart" id="addBtn3">Add <i class="fa-solid fa-cart-shopping ms-1"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Book 4 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="book-card" id="productCard4">
+                                <div class="book-img-container">
+                                    <svg viewBox="0 0 150 220" class="book-img" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="100%" height="100%" fill="#3A5C5A" />
+                                        <rect x="10" y="10" width="130" height="200" fill="none" stroke="#E0A458" stroke-width="1" />
+                                        <text x="75" y="80" fill="#F9F6F0" font-family="'Merriweather', serif" font-weight="bold" font-size="12" text-anchor="middle">BEYOND THE</text>
+                                        <text x="75" y="105" fill="#F9F6F0" font-family="'Merriweather', serif" font-weight="bold" font-size="12" text-anchor="middle">HORIZON</text>
+                                        <text x="75" y="150" fill="#E0A458" font-family="'Inter', sans-serif" font-size="9" text-anchor="middle">Arthur Dent</text>
+                                    </svg>
+                                </div>
+                                <div class="book-info">
+                                    <span class="book-genre">Sci-Fi</span>
+                                    <h3 class="book-title">Beyond the Horizon</h3>
+                                    <p class="book-author">by Arthur Dent</p>
+                                    <p class="text-muted text-sm small flex-grow-1">Exploring distant planets with gentle prose and deep philosophical threads.</p>
+                                    <div class="book-footer">
+                                        <span class="book-price">$18.99</span>
+                                        <button class="btn btn-sm btn-custom btn-add-to-cart" id="addBtn4">Add <i class="fa-solid fa-cart-shopping ms-1"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Book 5 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="book-card" id="productCard5">
+                                <div class="book-img-container">
+                                    <svg viewBox="0 0 150 220" class="book-img" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="100%" height="100%" fill="#786B59" />
+                                        <rect x="10" y="10" width="130" height="200" fill="none" stroke="#D5E3E0" stroke-width="1" />
+                                        <text x="75" y="80" fill="#F9F6F0" font-family="'Merriweather', serif" font-weight="bold" font-size="12" text-anchor="middle">SILENT</text>
+                                        <text x="75" y="105" fill="#F9F6F0" font-family="'Merriweather', serif" font-weight="bold" font-size="12" text-anchor="middle">VOICES</text>
+                                        <text x="75" y="150" fill="#E0A458" font-family="'Inter', sans-serif" font-size="9" text-anchor="middle">Laura Hayes</text>
+                                    </svg>
+                                </div>
+                                <div class="book-info">
+                                    <span class="book-genre">Biography</span>
+                                    <h3 class="book-title">Silent Voices</h3>
+                                    <p class="book-author">by Laura Hayes</p>
+                                    <p class="text-muted text-sm small flex-grow-1">A historical look at the stories of unnamed librarians throughout war times.</p>
+                                    <div class="book-footer">
+                                        <span class="book-price">$15.00</span>
+                                        <button class="btn btn-sm btn-custom btn-add-to-cart" id="addBtn5">Add <i class="fa-solid fa-cart-shopping ms-1"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Book 6 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="book-card" id="productCard6">
+                                <div class="book-img-container">
+                                    <svg viewBox="0 0 150 220" class="book-img" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="100%" height="100%" fill="#43526A" />
+                                        <rect x="10" y="10" width="130" height="200" fill="none" stroke="#E0A458" stroke-width="1" />
+                                        <text x="75" y="80" fill="#F9F6F0" font-family="'Merriweather', serif" font-weight="bold" font-size="12" text-anchor="middle">THE OCEAN</text>
+                                        <text x="75" y="105" fill="#F9F6F0" font-family="'Merriweather', serif" font-weight="bold" font-size="12" text-anchor="middle">DREAM</text>
+                                        <text x="75" y="150" fill="#E0A458" font-family="'Inter', sans-serif" font-size="9" text-anchor="middle">Hiroshi Sato</text>
+                                    </svg>
+                                </div>
+                                <div class="book-info">
+                                    <span class="book-genre">Fiction</span>
+                                    <h3 class="book-title">The Ocean Dream</h3>
+                                    <p class="book-author">by Hiroshi Sato</p>
+                                    <p class="text-muted text-sm small flex-grow-1">A story of deep ocean sails, quiet mornings, and looking for peace.</p>
+                                    <div class="book-footer">
+                                        <span class="book-price">$17.95</span>
+                                        <button class="btn btn-sm btn-custom btn-add-to-cart" id="addBtn6">Add <i class="fa-solid fa-cart-shopping ms-1"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Load More Container -->
+                    <div class="text-center mt-5">
+                        <button class="btn btn-custom px-5" id="loadMoreBtn">Load More Books</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-custom">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="serif-font"><i class="fa-solid fa-book-open"></i> PageHaven</h5>
+                    <p class="text-white-50 mt-3">A cozy library-themed sanctuary for readers. Nourishing minds and promoting screen-free relaxation since 2026.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="serif-font">Quick Links</h5>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-2"><a href="index.html">Home</a></li>
+                        <li class="mb-2"><a href="products.html">Products</a></li>
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="serif-font">Contact</h5>
+                    <ul class="list-unstyled text-white-50 mt-3">
+                        <li class="mb-2"><i class="fa-solid fa-location-dot me-2"></i> 101 Bookworm Lane, Reading City</li>
+                        <li class="mb-2"><i class="fa-solid fa-envelope me-2"></i> hello@pagehaven.com</li>
+                        <li class="mb-2"><i class="fa-solid fa-phone me-2"></i> +1 (555) 789-2246</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="serif-font">Current Date & Time</h5>
+                    <!-- Live Clock Widget -->
+                    <div class="footer-clock text-white-50 mt-3" id="clockWidget">
+                        <i class="fa-regular fa-clock me-2"></i>
+                        <span id="liveClock">Thursday, July 09, 2026 — 10:42 AM</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom text-center text-white-50">
+                <p class="mb-0">&copy; 2026 PageHaven. All rights reserved. Designed to eye-cooling excellence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 Bundle JS with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Script File -->
+    <script src="js/script.js"></script>
+</body>
+</html>

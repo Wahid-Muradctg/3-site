@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+
+:root {
+    --primary-color: #4A7C82;       /* Muted Teal */
+    --secondary-color: #2C3E50;     /* Deep Navy */
+    --accent-color: #E0A458;        /* Warm Amber */
+    --bg-color: #F9F6F0;            /* Soft Cream */
+    --text-color: #2B2B2B;          /* Dark Slate */
+    --border-color: #D5E3E0;        /* Pale Teal */
+    --card-shadow: 0 4px 15px rgba(44, 62, 80, 0.05);
+    --hover-shadow: 0 8px 25px rgba(44, 62, 80, 0.1);
+    --font-heading: 'Merriweather', serif;
+    --font-body: 'Inter', sans-serif;
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6, .serif-font {
+    font-family: var(--font-heading);
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+/* Custom Buttons */
+.btn-custom {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 24px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn-custom:hover, .btn-custom:focus {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(224, 164, 88, 0.3);
+}
+
+.btn-custom-outline {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 30px;
+    padding: 8px 22px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn-custom-outline:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Navigation bar */
+.navbar-custom {
+    background-color: #ffffff;
+    border-bottom: 2px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+    padding: 15px 0;
+    transition: var(--transition);
+}
+
+.navbar-custom .navbar-brand {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar-custom .navbar-brand i {
+    color: var(--primary-color);
+}
+
+.navbar-custom .nav-link {
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 8px 16px !important;
+    position: relative;
+    transition: var(--transition);
+}
+
+.navbar-custom .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 16px;
+    background-color: var(--accent-color);
+    transition: var(--transition);
+}
+
+.navbar-custom .nav-link:hover {
+    color: var(--primary-color);
+}
+
+.navbar-custom .nav-link:hover::after,
+.navbar-custom .nav-link.active::after {
+    width: calc(100% - 32px);
+}
+
+.navbar-custom .nav-link.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #ffffff 0%, var(--bg-color) 100%);
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+.hero-tagline {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.hero-image-wrapper:hover .hero-image {
+    transform: scale(1.03);
+}
+
+/* Book Card */
+.book-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: var(--transition);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--hover-shadow);
+    border-color: var(--primary-color);
+    background-color: #FAF8F5; /* Cozy highlight cream */
+}
+
+.book-img-container {
+    background: #fdfdfd;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    height: 260px;
+    overflow: hidden;
+}
+
+.book-img {
+    max-height: 220px;
+    width: auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: var(--transition);
+}
+
+.book-card:hover .book-img {
+    transform: scale(1.05) rotate(2deg);
+}
+
+.book-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.book-genre {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.book-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: var(--secondary-color);
+}
+
+.book-author {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.book-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.book-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+/* Custom Unordered List: e.g. Popular Genres or Why Read With Us */
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 30px 0;
+}
+
+.custom-list-item {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 12px;
+    font-weight: 500;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: var(--transition);
+}
+
+.custom-list-item i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.custom-list-item:hover {
+    background-color: #f1ede4;
+    border-color: var(--primary-color);
+    transform: translateX(5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.custom-list-item:hover i {
+    color: var(--accent-color);
+}
+
+/* Collapsible Accordion Membership Section */
+.custom-accordion {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+}
+
+.custom-accordion-item {
+    background: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.custom-accordion-item:last-child {
+    border-bottom: none;
+}
+
+.custom-accordion-header {
+    background: #ffffff;
+    padding: 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.custom-accordion-header:hover {
+    background-color: rgba(74, 124, 130, 0.05);
+    color: var(--primary-color);
+}
+
+.custom-accordion-header::after {
+    content: '\f107';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    transition: var(--transition);
+}
+
+.custom-accordion-header.active {
+    background-color: rgba(74, 124, 130, 0.08);
+    color: var(--primary-color);
+}
+
+.custom-accordion-header.active::after {
+    transform: rotate(180deg);
+    color: var(--accent-color);
+}
+
+.custom-accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    background: #fafaf9;
+}
+
+.custom-accordion-body-content {
+    padding: 25px;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Live Clock Widget */
+.footer-clock {
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Footer style */
+.footer-custom {
+    background-color: var(--secondary-color);
+    color: rgba(255, 255, 255, 0.85);
+    padding: 60px 0 20px 0;
+    border-top: 5px solid var(--primary-color);
+}
+
+.footer-custom h5 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.footer-custom a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-custom a:hover {
+    color: var(--accent-color);
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    margin-top: 40px;
+}
+
+/* Products Sidebar Filters */
+.filter-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: var(--card-shadow);
+}
+
+/* External Link styling */
+.partner-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px dashed var(--primary-color);
+    transition: var(--transition);
+    padding-bottom: 2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.partner-link:hover {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+    transform: translateY(-1px);
+}
+
+/* Contact map block */
+.map-placeholder {
+    height: 350px;
+    width: 100%;
+    background: #eaeaea;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #666;
+}
+
+/* Modal customizations */
+.modal-content-custom {
+    background-color: var(--bg-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+}
+
+.modal-header-custom {
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--secondary-color);
+    color: #ffffff;
+}
+
+.modal-header-custom h5 {
+    color: #ffffff;
+}
+
+.modal-footer-custom {
+    border-top: 1px solid var(--border-color);
+}

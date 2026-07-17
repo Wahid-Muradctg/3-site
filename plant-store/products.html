@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenNest | Browse Houseplants & Succulents</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore GreenNest's catalog of house plants, indoor greenery, hanging ferns, and desk succulents. Filter by price, type, or light.">
+    <meta name="keywords" content="buy plants online, indoor plants, succulents, ferns, golden pothos, aloe vera, plant shop">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom Style Sheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-green navbar-light" id="mainNavbar">
+            <div class="container">
+                <a class="navbar-brand" href="index.html" id="brandLogo">
+                    <i class="fa-solid fa-seedling"></i> GreenNest
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation" id="navCollapseBtn">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html" id="navHomeLink">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="products.html" id="navProductsLink">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html" id="navAboutLink">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html" id="navContactLink">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="py-5">
+        <div class="container">
+            <!-- Page Title Section -->
+            <div class="mb-5 text-center">
+                <h1 class="serif-font" style="color: var(--secondary-color);">Our Plant Collection</h1>
+                <p class="text-muted text-sm">Grown with care, curated for standard indoor environments.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Sidebar Filters -->
+                <aside class="col-lg-3">
+                    <div class="plant-filter-box" id="sidebarFilters">
+                        <h4 class="mb-4 serif-font border-bottom pb-2" style="font-size: 1.25rem;"><i class="fa-solid fa-filter me-2"></i> Filter Collection</h4>
+                        
+                        <!-- Plant Type Filter -->
+                        <div class="mb-4">
+                            <h5 class="serif-font mb-3" style="font-size: 1rem;">Plant Type</h5>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" value="indoor" id="typeIndoor" checked>
+                                <label class="form-check-label" for="typeIndoor">Indoor Plants</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" value="outdoor" id="typeOutdoor">
+                                <label class="form-check-label" for="typeOutdoor">Outdoor Plants</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" value="succulents" id="typeSucculents">
+                                <label class="form-check-label" for="typeSucculents">Succulents</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" value="hanging" id="typeHanging">
+                                <label class="form-check-label" for="typeHanging">Hanging Vines</label>
+                            </div>
+                        </div>
+
+                        <!-- Placement Filter -->
+                        <div class="mb-4">
+                            <h5 class="serif-font mb-3" style="font-size: 1rem;">Lighting Requirement</h5>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" value="bright" id="lightBright" checked>
+                                <label class="form-check-label" for="lightBright">Bright Indirect</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" value="low" id="lightLow">
+                                <label class="form-check-label" for="lightLow">Low Light Tolerant</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="direct" id="lightDirect">
+                                <label class="form-check-label" for="lightDirect">Full Sun</label>
+                            </div>
+                        </div>
+
+                        <!-- Price Range -->
+                        <div class="mb-4">
+                            <h5 class="serif-font mb-3" style="font-size: 1rem;">Price Range</h5>
+                            <input type="range" class="form-range" min="10" max="100" step="5" id="priceRange">
+                            <div class="d-flex justify-content-between text-muted text-sm">
+                                <span>$10</span>
+                                <span>Max: $100</span>
+                            </div>
+                        </div>
+
+                        <!-- Apply Filters Button -->
+                        <button class="btn btn-green w-100" type="button" onclick="alert('Botanical filters applied!')" id="applyFiltersBtn">Filter Plants</button>
+                    </div>
+                </aside>
+
+                <!-- Plants Grid -->
+                <section class="col-lg-9">
+                    <div class="row g-4">
+                        <!-- Plant 1 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="plant-card" id="productCard1">
+                                <div class="plant-img-container">
+                                    <span class="plant-badge">Indoor</span>
+                                    <svg viewBox="0 0 150 200" class="plant-img" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M55,140 L95,140 L105,180 L45,180 Z" fill="#D9A679" />
+                                        <path d="M75,140 Q75,60 50,30" stroke="#3B5D42" stroke-width="4" fill="none" />
+                                        <path d="M50,30 C40,25 35,40 45,55 C50,60 60,55 50,30 Z" fill="#87A96B" />
+                                        <path d="M75,140 Q90,80 110,50" stroke="#3B5D42" stroke-width="3" fill="none" />
+                                        <path d="M110,50 C120,45 125,60 115,75 Z" fill="#87A96B" />
+                                    </svg>
+                                </div>
+                                <div class="plant-info">
+                                    <span class="plant-cat">Ficus</span>
+                                    <h3 class="plant-name">Fiddle Leaf Fig</h3>
+                                    <p class="plant-desc text-muted small">Elegant, large fiddle-shaped leaves that command attention.</p>
+                                    <div class="plant-footer mt-auto">
+                                        <span class="plant-price">$35.00</span>
+                                        <button class="btn btn-sm btn-green btn-add-to-cart" id="addBtn1"><i class="fa-solid fa-plus"></i> Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Plant 2 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="plant-card" id="productCard2">
+                                <div class="plant-img-container">
+                                    <span class="plant-badge">Easy Care</span>
+                                    <svg viewBox="0 0 150 200" class="plant-img" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M55,140 L95,140 L105,180 L45,180 Z" fill="#786B59" />
+                                        <path d="M75,140 L70,30 Q65,140 75,140" fill="#3B5D42" stroke="#87A96B" stroke-width="2" />
+                                        <path d="M60,140 L50,50 Q45,140 60,140" fill="#3B5D42" stroke="#87A96B" stroke-width="1.5" />
+                                        <path d="M90,140 L95,45 Q100,140 90,140" fill="#3B5D42" stroke="#87A96B" stroke-width="1.5" />
+                                    </svg>
+                                </div>
+                                <div class="plant-info">
+                                    <span class="plant-cat">Sansevieria</span>
+                                    <h3 class="plant-name">Snake Plant Laurentii</h3>
+                                    <p class="plant-desc text-muted small">Hardy, highly resilient, and excellent for night air-filtering.</p>
+                                    <div class="plant-footer mt-auto">
+                                        <span class="plant-price">$24.50</span>
+                                        <button class="btn btn-sm btn-green btn-add-to-cart" id="addBtn2"><i class="fa-solid fa-plus"></i> Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Plant 3 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="plant-card" id="productCard3">
+                                <div class="plant-img-container">
+                                    <span class="plant-badge">Indoor</span>
+                                    <svg viewBox="0 0 150 200" class="plant-img" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M55,140 L95,140 L105,180 L45,180 Z" fill="#D9A679" />
+                                        <path d="M75,140 Q75,70 75,40" stroke="#3B5D42" stroke-width="3" fill="none" />
+                                        <path d="M75,40 C65,30 65,15 75,10 C85,15 85,30 75,40 Z" fill="#FAF5F0" stroke="#87A96B" />
+                                        <circle cx="75" cy="20" r="2" fill="#D9A679" />
+                                        <path d="M75,140 Q60,90 55,60 C55,80 70,120 75,140" fill="#3B5D42" />
+                                        <path d="M75,140 Q90,95 95,65 C95,85 80,120 75,140" fill="#3B5D42" />
+                                    </svg>
+                                </div>
+                                <div class="plant-info">
+                                    <span class="plant-cat">Spathiphyllum</span>
+                                    <h3 class="plant-name">Peace Lily Classic</h3>
+                                    <p class="plant-desc text-muted small">Showcases brilliant white blooms. Tells you when it needs water.</p>
+                                    <div class="plant-footer mt-auto">
+                                        <span class="plant-price">$28.00</span>
+                                        <button class="btn btn-sm btn-green btn-add-to-cart" id="addBtn3"><i class="fa-solid fa-plus"></i> Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Plant 4 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="plant-card" id="productCard4">
+                                <div class="plant-img-container">
+                                    <span class="plant-badge">Hanging</span>
+                                    <svg viewBox="0 0 150 200" class="plant-img" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M55,100 L95,100 L105,130 L45,130 Z" fill="#D9A679" />
+                                        <path d="M40,100 L110,100" stroke="#C58D5F" stroke-width="4" />
+                                        <path d="M50,110 Q20,140 15,180" stroke="#3B5D42" stroke-width="2" fill="none" />
+                                        <path d="M75,110 Q75,150 70,190" stroke="#3B5D42" stroke-width="2.5" fill="none" />
+                                        <path d="M100,110 Q120,145 130,185" stroke="#3B5D42" stroke-width="2" fill="none" />
+                                        <circle cx="25" cy="135" r="4" fill="#87A96B" />
+                                        <circle cx="17" cy="155" r="4" fill="#87A96B" />
+                                        <circle cx="73" cy="140" r="5" fill="#87A96B" />
+                                        <circle cx="71" cy="170" r="5" fill="#87A96B" />
+                                        <circle cx="112" cy="135" r="4" fill="#87A96B" />
+                                        <circle cx="124" cy="160" r="4" fill="#87A96B" />
+                                    </svg>
+                                </div>
+                                <div class="plant-info">
+                                    <span class="plant-cat">Fern</span>
+                                    <h3 class="plant-name">Boston Fern Pot</h3>
+                                    <p class="plant-desc text-muted small">Lush, feathery green fronds that look magnificent hanging.</p>
+                                    <div class="plant-footer mt-auto">
+                                        <span class="plant-price">$19.99</span>
+                                        <button class="btn btn-sm btn-green btn-add-to-cart" id="addBtn4"><i class="fa-solid fa-plus"></i> Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Plant 5 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="plant-card" id="productCard5">
+                                <div class="plant-img-container">
+                                    <span class="plant-badge">Succulent</span>
+                                    <svg viewBox="0 0 150 200" class="plant-img" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M55,140 L95,140 L105,180 L45,180 Z" fill="#D9A679" />
+                                        <!-- Succulent rosettes -->
+                                        <circle cx="75" cy="120" r="22" fill="#87A96B" />
+                                        <circle cx="75" cy="120" r="16" fill="#3B5D42" />
+                                        <circle cx="75" cy="120" r="10" fill="#FAF5F0" opacity="0.6" />
+                                    </svg>
+                                </div>
+                                <div class="plant-info">
+                                    <span class="plant-cat">Aloe</span>
+                                    <h3 class="plant-name">Aloe Vera Organic</h3>
+                                    <p class="plant-desc text-muted small">Thick leaves filled with healing sap, requires minimal watering.</p>
+                                    <div class="plant-footer mt-auto">
+                                        <span class="plant-price">$12.00</span>
+                                        <button class="btn btn-sm btn-green btn-add-to-cart" id="addBtn5"><i class="fa-solid fa-plus"></i> Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Plant 6 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="plant-card" id="productCard6">
+                                <div class="plant-img-container">
+                                    <span class="plant-badge">Vining</span>
+                                    <svg viewBox="0 0 150 200" class="plant-img" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M55,140 L95,140 L105,180 L45,180 Z" fill="#786B59" />
+                                        <path d="M75,140 Q60,90 65,40" stroke="#3B5D42" stroke-width="3" fill="none" />
+                                        <!-- Heart shaped leaves -->
+                                        <path d="M65,40 C55,30 50,45 65,55 Z" fill="#87A96B" />
+                                        <path d="M71,70 C81,60 85,75 71,85 Z" fill="#3B5D42" />
+                                        <path d="M73,100 C63,90 58,105 73,115 Z" fill="#87A96B" />
+                                    </svg>
+                                </div>
+                                <div class="plant-info">
+                                    <span class="plant-cat">Epipremnum</span>
+                                    <h3 class="plant-name">Golden Pothos Totem</h3>
+                                    <p class="plant-desc text-muted small">Features beautiful golden marbled heart-shaped trail leaves.</p>
+                                    <div class="plant-footer mt-auto">
+                                        <span class="plant-price">$16.50</span>
+                                        <button class="btn btn-sm btn-green btn-add-to-cart" id="addBtn6"><i class="fa-solid fa-plus"></i> Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Load More Controller -->
+                    <div class="text-center mt-5">
+                        <button class="btn btn-green px-5" id="loadMoreBtn">Sprout More Plants</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-green">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5><i class="fa-solid fa-seedling"></i> GreenNest</h5>
+                    <p class="text-white-50 mt-3">A fresh, air-cooling plant store dedicated to helping you build your personal home sanctuary. Preserving natural aesthetics since 2026.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-2"><a href="index.html">Home</a></li>
+                        <li class="mb-2"><a href="products.html">Products</a></li>
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled text-white-50 mt-3">
+                        <li class="mb-2"><i class="fa-solid fa-location-dot me-2"></i> 404 Botanical Gardens, Green City</li>
+                        <li class="mb-2"><i class="fa-solid fa-envelope me-2"></i> hello@greennest.com</li>
+                        <li class="mb-2"><i class="fa-solid fa-phone me-2"></i> +1 (555) 321-4321</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Current Date & Time</h5>
+                    <!-- Live Clock Widget -->
+                    <div class="plant-clock mt-3" id="clockWidget">
+                        <i class="fa-regular fa-clock me-2"></i>
+                        <span id="liveClock">Thursday, July 09, 2026 — 10:42 AM</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-green-bottom text-center text-white-50">
+                <p class="mb-0">&copy; 2026 GreenNest. All rights reserved. Designed for nature lovers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 Bundle JS with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Script File -->
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio.Pro | Contact Freelance Consultant</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Get in touch with Jonathan Miller for your web development scoping requirements. Secure contact form validation and address details.">
+    <meta name="keywords" content="hire frontend developer, consulting contact, responsive scoping form, tech architect location">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom Style Sheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-portfolio navbar-light" id="mainNavbar">
+            <div class="container">
+                <a class="navbar-brand" href="index.html" id="brandLogo">
+                    <span>Portfolio</span>.Pro
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation" id="navCollapseBtn">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html" id="navHomeLink">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html" id="navAboutLink">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html" id="navPortfolioLink">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html" id="navServicesLink">Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="contact.html" id="navContactLink">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="py-5">
+        <div class="container">
+            
+            <!-- Page Title Section -->
+            <div class="text-center mb-5">
+                <h1 class="serif-font text-gradient display-5">Start Your Project Journey</h1>
+                <p class="text-muted">Fill out the validated scoping form below to receive a custom layout proposal.</p>
+            </div>
+
+            <div class="row g-5">
+                <!-- Direct Contact Details & Map -->
+                <section class="col-lg-5">
+                    <div class="card border-0 shadow-sm p-4 mb-4 bg-white" style="border-radius: 12px;">
+                        <h3 class="h4 serif-font mb-4">Direct Details</h3>
+                        <ul class="list-unstyled mb-4">
+                            <li class="d-flex align-items-center mb-3">
+                                <i class="fa-solid fa-envelope me-3 text-coral" style="font-size: 1.2rem; color: var(--accent-color);"></i>
+                                <span>contact@portfoliopro.com</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-3">
+                                <i class="fa-solid fa-phone me-3 text-coral" style="font-size: 1.2rem; color: var(--accent-color);"></i>
+                                <span>+1 (555) 901-4432</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-3">
+                                <i class="fa-solid fa-location-dot me-3 text-coral" style="font-size: 1.2rem; color: var(--accent-color);"></i>
+                                <span>Silicon District, Tech City, Suite 500</span>
+                            </li>
+                        </ul>
+
+                        <h4 class="h5 serif-font mb-3">Social Indexes</h4>
+                        <div class="d-flex gap-2">
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary d-flex align-items-center justify-content-center" style="width: 38px; height: 38px; border-radius: 6px;" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-dark d-flex align-items-center justify-content-center" style="width: 38px; height: 38px; border-radius: 6px;" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-danger d-flex align-items-center justify-content-center" style="width: 38px; height: 38px; border-radius: 6px;" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Map Placeholder -->
+                    <div class="portfolio-map-placeholder" id="storeMapBlock">
+                        <i class="fa-solid fa-earth-americas mb-3" style="font-size: 3rem; color: var(--accent-color);"></i>
+                        <span class="fw-bold text-white">Silicon District</span>
+                        <span class="text-white-50 small">Tech City, USA</span>
+                    </div>
+                </section>
+
+                <!-- Scoping Form Section with manual JS validation borders -->
+                <section class="col-lg-7">
+                    <div class="card border-0 shadow-sm p-4 bg-white" style="border-radius: 12px;">
+                        <h3 class="h4 serif-font mb-4">Project Scoping Form</h3>
+                        <form id="contactForm" novalidate>
+                            <!-- Name -->
+                            <div class="mb-3">
+                                <label for="formName" class="form-label fw-bold">Full Name</label>
+                                <input type="text" class="form-control" id="formName" placeholder="John Doe">
+                                <div class="text-coral" id="formNameFeedback" style="display: none; font-size: 0.8rem; margin-top: 5px;">Name is required.</div>
+                            </div>
+                            <!-- Email -->
+                            <div class="mb-3">
+                                <label for="formEmail" class="form-label fw-bold">Email Address</label>
+                                <input type="email" class="form-control" id="formEmail" placeholder="john@example.com">
+                                <div class="text-coral" id="formEmailFeedback" style="display: none; font-size: 0.8rem; margin-top: 5px;">Valid email address is required.</div>
+                            </div>
+                            <!-- Phone -->
+                            <div class="mb-3">
+                                <label for="formPhone" class="form-label fw-bold">Phone Number</label>
+                                <input type="tel" class="form-control" id="formPhone" placeholder="+1 (555) 000-0000">
+                                <div class="text-coral" id="formPhoneFeedback" style="display: none; font-size: 0.8rem; margin-top: 5px;">Phone number is required.</div>
+                            </div>
+                            <!-- Address -->
+                            <div class="mb-3">
+                                <label for="formAddress" class="form-label fw-bold">Street Address</label>
+                                <input type="text" class="form-control" id="formAddress" placeholder="123 Creative Way">
+                                <div class="text-coral" id="formAddressFeedback" style="display: none; font-size: 0.8rem; margin-top: 5px;">Street address is required.</div>
+                            </div>
+                            <!-- Message -->
+                            <div class="mb-4">
+                                <label for="formMessage" class="form-label fw-bold">Project Scope Details</label>
+                                <textarea class="form-control" id="formMessage" rows="4" placeholder="Briefly describe your goals, budget range, and timeline guidelines..."></textarea>
+                                <div class="text-coral" id="formMessageFeedback" style="display: none; font-size: 0.8rem; margin-top: 5px;">Project details are required.</div>
+                            </div>
+
+                            <button type="submit" class="btn btn-accent w-100 py-2.5 fw-bold" id="submitFormBtn">Submit Scoping Request <i class="fa-regular fa-paper-plane ms-2"></i></button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Successful Scoping Modal -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border: 3px solid #22c55e; border-radius: 12px; background-color: var(--bg-color);">
+                <div class="modal-header py-3 px-4" style="background-color: #22c55e; color: #ffffff;">
+                    <h5 class="modal-title" id="confirmationModalLabel"><i class="fa-solid fa-circle-check me-2"></i> Scoping Submitted Successfully</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-5 text-center">
+                    <i class="fa-solid fa-paper-plane text-green mb-3" style="font-size: 3.5rem; color: #22c55e;"></i>
+                    <p class="lead mb-0 fw-bold" style="color: var(--secondary-color);">Thank you! Your message has been sent.</p>
+                    <p class="text-muted small mt-2">I will review your project parameters and respond via email in 24 hours.</p>
+                </div>
+                <div class="modal-footer justify-content-center border-top-0 pb-4">
+                    <button type="button" class="btn btn-portfolio" data-bs-dismiss="modal">Return to Site</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-portfolio">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-white">Portfolio<span>.Pro</span></h5>
+                    <p class="text-white-50 mt-3">A premium SaaS-oriented portfolio showcase for freelance web development and UX architecture. Engineered for device-agnostic excellence.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-2"><a href="index.html">Home</a></li>
+                        <li class="mb-2"><a href="about.html">About</a></li>
+                        <li class="mb-2"><a href="portfolio.html">Portfolio</a></li>
+                        <li class="mb-2"><a href="services.html">Service</a></li>
+                        <li class="mb-2"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Hire Details</h5>
+                    <ul class="list-unstyled text-white-50 mt-3">
+                        <li class="mb-2"><i class="fa-solid fa-envelope me-2 text-coral"></i> contact@portfoliopro.com</li>
+                        <li class="mb-2"><i class="fa-solid fa-phone me-2 text-coral"></i> +1 (555) 901-4432</li>
+                        <li class="mb-2"><i class="fa-solid fa-location-dot me-2 text-coral"></i> Silicon District, Tech City</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Current Date & Time</h5>
+                    <!-- Live Clock Widget -->
+                    <div class="portfolio-clock mt-3" id="clockWidget">
+                        <i class="fa-regular fa-clock me-2 text-coral"></i>
+                        <span id="liveClock">Thursday, July 09, 2026 — 10:42 AM</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-portfolio-bottom text-center text-white-50">
+                <p class="mb-0">&copy; 2026 Portfolio.Pro. All rights reserved. Hand-coded, premium responsive quality.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 Bundle JS with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Script File -->
+    <script src="js/script.js"></script>
+</body>
+</html>
